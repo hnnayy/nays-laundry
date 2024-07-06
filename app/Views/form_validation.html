@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gentelella Alela!</title>
+  <!-- Bootstrap -->
+  <link href="<?php echo base_url('asset/vendors/bootstrap/dist/css/bootstrap.min.css'); ?>" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="<?php echo base_url('asset/vendors/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="<?php echo base_url('asset/vendors/nprogress/nprogress.css'); ?>" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="<?php echo base_url('asset/vendors/iCheck/skins/flat/green.css'); ?>" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="<?php echo base_url('asset/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css'); ?>" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="<?php echo base_url('asset/vendors/jqvmap/dist/jqvmap.min.css'); ?>" rel="stylesheet">
+  <!-- bootstrap-daterangepicker -->
+  <link href="<?php echo base_url('asset/vendors/bootstrap-daterangepicker/daterangepicker.css'); ?>" rel="stylesheet">
+  <!-- Custom Theme Style -->
+  <link href="<?php echo base_url('asset/build/css/custom.css'); ?>" rel="stylesheet">
+</head>
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="clearfix"></div>
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="<?php echo base_url('asset/production/images/laundry.png'); ?>" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Nayss Laundry!</span>
+              <h2>Good Morning Admin^^</h2>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a href="<?= base_url('Dashboard'); ?>"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a></li>
+                <li><a><i class="fa fa-edit"></i> Forms Input <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="FormPendaftaranPelanggan">Form Pendaftaran Pelanggan</a></li>
+                    <li><a href="FormPemesananLayanan">Form Pemesanan Layanan</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-table"></i> Laporan Transaksi <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="LaporanTransaksi">Laporan Transaksi Harian</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /sidebar menu -->
+        </div>
+
+      </div>
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img src="<?php echo base_url('asset/production/images/administrator.png'); ?>" alt="Hanin Admin">
+                  <span class="fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li><a href="javascript:;">Profile</a></li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="badge bg-red pull-right">50%</span>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                  <li><a href="javascript:;">Help</a></li>
+                  <li><a href="logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                </ul>
+              </li>
+              <li role="presentation" class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="badge bg-green">6</span>
+                </a>
+                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                  <li>
+                    <a>
+                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                      </span>
+                    </a>
+                  </li>
+                  <!-- Repeat message items as needed -->
+                  <li>
+                    <div class="text-center">
+                      <a>
+                        <strong>See All Alerts</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Form Pemesanan Layanan Laundry</title>
+          <!-- Masukkan stylesheet Anda di sini jika ada -->
+      </head>
+      <body>
+       <!-- page content -->
+    <div class="right_col" role="main">
+      <div class="">
+          <div class="page-title">
+              <div class="title_left">
+                  <h3>Form Pemesanan Layanan Laundry</h3>
+              </div>
+              <div class="title_right">
+                  <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                      <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search for...">
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="clearfix"></div>
+          <form class="form-horizontal form-label-left" method="post" action="<?= base_url('/FormPemesananLayanan') ?>">
+            <div class="item form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nama<span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                
+                 <!-- Dropdown untuk nama pelanggan -->
+                 <select id="nama" name="nama" class="form-control col-md-7 col-xs-12" required>
+                  <option value="">Pilih Nama Pelanggan</option>
+                  <?php foreach ($pelanggan as $p): ?>
+                      <option value="<?= $p['nama']; ?>"><?= $p['nama']; ?></option>
+                  <?php endforeach; ?>
+              </select>
+                
+              </div>
+          </div>
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="jumlah_layanan">Jumlah Layanan <span class="required">*</span>
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="number" id="jumlah_layanan" name="jumlah_layanan" min="1" class="form-control col-md-7 col-xs-12" required>
+            </div>
+        </div>
+    
+        <div id="jenis_layanan_group"></div>
+        <input type="hidden" id="jenis_layanan_hidden" name="jenis_layanan" value="">
+    
+        <div id="jumlah_kg_group"></div>
+        <input type="hidden" id="jumlah_kg_hidden" name="jumlah_kg" value="">
+    
+        <div id="total_harga_perlayanan"></div>
+        <input type="hidden" id="total_harga_perlayanan_hidden" name="total_harga_perlayanan" value="">
+    
+        <div id="total_harga_keseluruhan_group"></div>
+        <input type="hidden" id="total_harga_keseluruhan_hidden" name="total_harga_keseluruhan" value="">
+    
+        <div id="total_harga_rupiah_group"></div>
+        <input type="hidden" id="total_harga_rupiah_hidden" name="total_harga_rupiah" value="">
+    
+        <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Total Harga Keseluruhan (Rp):</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <span id="total_harga_keseluruhan_rp" class="form-control col-md-7 col-xs-12"></span>
+            </div>
+        </div>
+        <input type="hidden" id="total_harga_keseluruhan_rp_hidden" name="total_harga_keseluruhan" value="">
+    
+        <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tanggal_penyerahan">Tanggal Penyerahan <span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="date" id="tanggal_penyerahan" name="tanggal_penyerahan" required="required" class="form-control col-md-7 col-xs-12">
+            </div>
+        </div>
+        <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tanggal_pengambilan">Tanggal Pengambilan <span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="date" id="tanggal_pengambilan" name="tanggal_pengambilan" required="required" class="form-control col-md-7 col-xs-12">
+            </div>
+        </div>
+        <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Catatan Tambahan <span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <textarea id="textarea" required="required" name="catatan_tambahan" class="form-control col-md-7 col-xs-12"></textarea>
+            </div>
+        </div>
+        <div class="ln_solid"></div>
+        <div class="form-group">
+            <div class="col-md-6 col-md-offset-3">
+                <button type="button" class="btn btn-primary">Cancel</button>
+                <button id="send" type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+</form>
+<?php if (isset($success_message)) : ?>
+    <div class="success-message">
+        <?= $success_message ?>
+    </div>
+<?php endif; ?>
+
+<script>
+  // Objek yang menyimpan harga-harga layanan
+  var hargaLayanan = {
+      laundry_kiloan: 6000,
+      laundry_satuan: 1000,
+      laundry_selimut: 15000,
+      dry_cleaning: 5000,
+      others: 10000
+  };
+
+  // Fungsi untuk menampilkan atau menyembunyikan elemen berdasarkan kebutuhan
+  function toggleVisibility(elementId, isVisible) {
+      var element = document.getElementById(elementId);
+      element.style.display = isVisible ? 'block' : 'none';
+  }
+
+  // Memantau perubahan pada input jumlah layanan
+  document.getElementById('jumlah_layanan').addEventListener('change', function () {
+      var jumlahLayanan = parseInt(this.value);
+      if (!isNaN(jumlahLayanan) && jumlahLayanan > 0) {
+          document.getElementById('jenis_layanan_group').innerHTML = '';
+          document.getElementById('jumlah_kg_group').innerHTML = '';
+          document.getElementById('total_harga_perlayanan').innerHTML = '';
+          document.getElementById('total_harga_keseluruhan_group').innerHTML = '';
+
+          for (var i = 0; i < jumlahLayanan; i++) {
+              var jenisLayananGroup = document.createElement('div');
+              jenisLayananGroup.className = 'item form-group';
+              jenisLayananGroup.innerHTML = `
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="jenis_layanan_${i + 1}">Jenis Layanan <span class="required">*</span></label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                      <select id="jenis_layanan_${i + 1}" name="jenis_layanan_${i + 1}" required="required" class="form-control col-md-7 col-xs-12">
+                          <option value="" disabled selected>Pilih Jenis Layanan</option>
+                          <option value="laundry_kiloan">Laundry Kiloan</option>
+                          <option value="laundry_satuan">Laundry Satuan</option>
+                          <option value="laundry_selimut">Laundry Selimut</option>
+                          <option value="dry_cleaning">Dry Cleaning</option>
+                          <option value="others">Others</option>
+                      </select>
+                  </div>`;
+              document.getElementById('jenis_layanan_group').appendChild(jenisLayananGroup);
+
+              var jumlahKgGroup = document.createElement('div');
+              jumlahKgGroup.className = 'item form-group';
+              jumlahKgGroup.innerHTML = `
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="jumlah_kg_${i + 1}">Banyaknya Pesanan dalam kg <span class="required">*</span></label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="number" id="jumlah_kg_${i + 1}" name="jumlah_kg_${i + 1}" required="required" class="form-control col-md-7 col-xs-12">
+                  </div>`;
+              document.getElementById('jumlah_kg_group').appendChild(jumlahKgGroup);
+
+              var totalHargaPerLayananGroup = document.createElement('div');
+              totalHargaPerLayananGroup.className = 'item form-group';
+              totalHargaPerLayananGroup.innerHTML = `
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">Total Harga Per Layanan:</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                      <span id="total_harga_perlayanan_${i + 1}" class="form-control col-md-7 col-xs-12"> Rp0,00</span>
+                  </div>`;
+              document.getElementById('total_harga_perlayanan').appendChild(totalHargaPerLayananGroup);
+          }
+      } else {
+          toggleVisibility('jenis_layanan_group', false);
+          toggleVisibility('jumlah_kg_group', false);
+          toggleVisibility('total_harga_perlayanan', false);
+          toggleVisibility('total_harga_keseluruhan_group', false);
+          toggleVisibility('total_harga_rupiah_group', false);
+      }
+  });
+
+  // Memantau perubahan pada input jumlah kilogram
+  document.addEventListener('input', function (event) {
+      if (event.target.matches('input[id^="jumlah_kg_"]')) {
+          var id = event.target.id.split('_').pop(); // Mendapatkan indeks layanan
+          var jenisLayanan = document.getElementById('jenis_layanan_' + id).value; // Mendapatkan jenis layanan
+          var jumlahKg = parseFloat(event.target.value); // Mendapatkan jumlah kilogram
+          if (!isNaN(jumlahKg)) {
+              var hargaPerKg = hargaLayanan[jenisLayanan]; // Mendapatkan harga per kilogram berdasarkan jenis layanan
+              var totalHarga = jumlahKg * hargaPerKg; // Hitung total harga
+              // Menampilkan total harga per layanan
+              document.getElementById('total_harga_perlayanan_' + id).innerText = ' Rp' + formatRupiah(totalHarga.toFixed(1));
+              updateTotalHargaKeseluruhan(); // Perbarui total harga keseluruhan
+          }
+      }
+  });
+
+  // Fungsi untuk memperbarui total harga keseluruhan
+  function updateTotalHargaKeseluruhan() {
+      var jumlahLayanan = parseInt(document.getElementById('jumlah_layanan').value);
+      var totalHargaKeseluruhan = 0;
+      for (var i = 1; i <= jumlahLayanan; i++) {
+          var totalHargaPerLayanan = document.getElementById('total_harga_perlayanan_' + i).innerText.split('Rp')[1].replace('.', '').replace(',', '.');
+          totalHargaKeseluruhan += parseFloat(totalHargaPerLayanan);
+      }
+      document.getElementById('total_harga_keseluruhan_rp').innerText = 'Rp' + formatRupiah(totalHargaKeseluruhan.toFixed(2));
+      document.getElementById('total_harga_keseluruhan_rp_hidden').value = totalHargaKeseluruhan.toFixed(2);
+  }
+
+  // Fungsi untuk memformat angka ke dalam format Rupiah
+  function formatRupiah(angka) {
+    var number_string = angka.toString(),
+        split = number_string.split('.'),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/g);
+
+    if (ribuan) {
+        var separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+    }
+
+    return rupiah;
+}
+
+  // Saat form disubmit, pastikan semua data tersembunyi diisi
+  document.getElementById('send').addEventListener('click', function () {
+      var jumlahLayanan = parseInt(document.getElementById('jumlah_layanan').value);
+      var jenisLayanan = [];
+      var jumlahKg = [];
+      var totalHargaPerLayanan = [];
+
+      for (var i = 1; i <= jumlahLayanan; i++) {
+          jenisLayanan.push(document.getElementById('jenis_layanan_' + i).value);
+          jumlahKg.push(document.getElementById('jumlah_kg_' + i).value);
+          totalHargaPerLayanan.push(document.getElementById('total_harga_perlayanan_' + i).innerText.split('Rp')[1].replace('.', '').replace(',', '.'));
+      }
+
+      document.getElementById('jenis_layanan_hidden').value = JSON.stringify(jenisLayanan);
+      document.getElementById('jumlah_kg_hidden').value = JSON.stringify(jumlahKg);
+      document.getElementById('total_harga_perlayanan_hidden').value = JSON.stringify(totalHargaPerLayanan);
+      document.getElementById('total_harga_keseluruhan_hidden').value = document.getElementById('total_harga_keseluruhan_rp_hidden').value;
+  });
+</script>
+
+</body>
+</html>
+      
+     <!-- jQuery -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/jquery/dist/jquery.min.js"></script>
+     <!-- Bootstrap -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+     <!-- FastClick -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/fastclick/lib/fastclick.js"></script>
+     <!-- NProgress -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/nprogress/nprogress.js"></script>
+     <!-- Chart.js -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/Chart.js/dist/Chart.min.js"></script>
+     <!-- gauge.js -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/gauge.js/dist/gauge.min.js"></script>
+     <!-- bootstrap-progressbar -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+     <!-- iCheck -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/iCheck/icheck.min.js"></script>
+     <!-- Skycons -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/skycons/skycons.js"></script>
+     <!-- Flot -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/Flot/jquery.flot.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/Flot/jquery.flot.pie.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/Flot/jquery.flot.time.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/Flot/jquery.flot.stack.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/Flot/jquery.flot.resize.js"></script>
+     <!-- Flot plugins -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/flot.curvedlines/curvedLines.js"></script>
+     <!-- DateJS -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/DateJS/build/date.js"></script>
+     <!-- JQVMap -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/jqvmap/dist/jquery.vmap.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+     <!-- bootstrap-daterangepicker -->
+     <script src="<?= base_url('asset');?>/../asset/vendors/moment/min/moment.min.js"></script>
+     <script src="<?= base_url('asset');?>/../asset/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+ 
+     <!-- Custom Theme Scripts -->
+     <script src="<?= base_url('asset'); ?>/build/js/custom.min.js"></script>
+     
+   </body>
+ </html>
+ 

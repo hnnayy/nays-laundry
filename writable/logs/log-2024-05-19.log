@@ -1,0 +1,1161 @@
+INFO - 2024-05-19 03:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-19 04:07:47 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `fo...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `fo...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `fo...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `fo...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\tubes litdat\ci4\app\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete(Array)
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-19 04:07:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: GET, Route: LaporanTransaksi/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:07:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:07:47 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+ERROR - 2024-05-19 04:08:27 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `fo...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `fo...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `fo...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `fo...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\tubes litdat\ci4\app\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete(Array)
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-19 04:08:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: GET, Route: LaporanTransaksi/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:08:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:08:27 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+ERROR - 2024-05-19 04:08:29 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `fo...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `fo...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `fo...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `fo...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\tubes litdat\ci4\app\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete(Array)
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-19 04:08:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: GET, Route: LaporanTransaksi/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:08:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:08:29 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+ERROR - 2024-05-19 04:08:33 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `fo...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `fo...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `fo...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `fo...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\tubes litdat\ci4\app\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete(Array)
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-19 04:08:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: GET, Route: LaporanTransaksi/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:08:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:08:33 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+ERROR - 2024-05-19 04:09:15 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `fo...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `fo...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `fo...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `fo...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\tubes litdat\ci4\app\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete(Array)
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-19 04:09:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: GET, Route: LaporanTransaksi/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:09:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:09:15 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+ERROR - 2024-05-19 04:09:18 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `fo...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `fo...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `fo...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `fo...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\tubes litdat\ci4\app\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete(Array)
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-19 04:09:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: GET, Route: LaporanTransaksi/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:09:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 04:09:18 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `form_pelanggan`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `form_pelanggan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(510): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\TableDynamics.php(33): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 04:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 04:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 04:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 04:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-05-19 04:47:40 --> Nama: hanin, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-19 04:47:55 --> Nama: hanin, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-19 04:48:30 --> Nama: hanin, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-19 04:55:44 --> Nama: ninis, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-19 04:58:16 --> Nama: nnn, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-19 05:09:32 --> Nama: hanin, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-19 05:13:56 --> Nama: hanin, Alamat: sukapura, No Telepon: 08111111
+INFO - 2024-05-19 05:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 05:41:08 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 173.
+ 1 APPPATH\Views\form_validation.html(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 173)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(61): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 05:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 05:43:09 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 173.
+ 1 APPPATH\Views\form_validation.html(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 173)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(61): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 05:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 05:50:51 --> ErrorException: Undefined variable $nama
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 174.
+ 1 APPPATH\Views\form_validation.html(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 174)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(63): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 05:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 05:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 05:59:02 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:00:16 --> ErrorException: Undefined variable $namaPelanggan
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(24): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:00:19 --> ErrorException: Undefined variable $namaPelanggan
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(24): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:00:23 --> ErrorException: Undefined variable $namaPelanggan
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(24): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:02:02 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:04:43 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:18:05 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 163.
+ 1 APPPATH\Views\form_validation.html(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:22:27 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:31:57 --> ErrorException: Undefined variable $nama
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:33:26 --> ErrorException: Undefined variable $namaPelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaPelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:42:12 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 06:42:43 --> ParseError: syntax error, unexpected token ")"
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 06:42:54 --> ParseError: syntax error, unexpected token ")"
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 06:43:05 --> ParseError: syntax error, unexpected token ")"
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:44:35 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(64): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:48:30 --> ErrorException: Array to string conversion
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 181.
+ 1 APPPATH\Views\form_validation.html(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 181)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:48:33 --> ErrorException: Array to string conversion
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 181.
+ 1 APPPATH\Views\form_validation.html(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 181)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:49:07 --> ErrorException: Array to string conversion
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 181.
+ 1 APPPATH\Views\form_validation.html(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 181)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:49:10 --> ErrorException: Array to string conversion
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 181.
+ 1 APPPATH\Views\form_validation.html(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 181)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:50:02 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(65): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 06:50:43 --> ParseError: syntax error, unexpected token ";", expecting "("
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 06:50:47 --> ParseError: syntax error, unexpected token ";", expecting "("
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 06:51:01 --> ParseError: syntax error, unexpected token ";", expecting "("
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:52:56 --> ErrorException: Undefined array key "nama"
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 176.
+ 1 APPPATH\Views\form_validation.html(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 176)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 06:56:01 --> ParseError: syntax error, unexpected token "[", expecting variable or "{" or "$"
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 176.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(25): view('form_validation.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 06:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 06:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 06:57:16 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(65): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 07:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 07:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 07:02:25 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(66): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 07:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 07:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 07:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 07:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 07:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 07:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 07:39:34 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 175.
+ 1 APPPATH\Views\form_validation.html(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 175)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(66): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+INFO - 2024-05-19 07:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 07:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 08:04:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_validation.php"
+[Method: GET, Route: FormPemesananLayanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_validation.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(18): view('form_validation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 08:05:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_validation.php"
+[Method: GET, Route: FormPemesananLayanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_validation.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(18): view('form_validation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 08:05:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_validation.php"
+[Method: GET, Route: FormPemesananLayanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_validation.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation', [], true)
+ 3 APPPATH\Controllers\ValidationForm.php(18): view('form_validation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 08:06:44 --> ErrorException: Undefined variable $p
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 163.
+ 1 APPPATH\Views\form_validation.html(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(18): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 08:34:26 --> ErrorException: Undefined array key "nama"
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Controllers\ValidationForm.php on line 35.
+ 1 APPPATH\Controllers\ValidationForm.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\tubes litdat\\ci4\\app\\Controllers\\ValidationForm.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 08:36:09 --> ErrorException: Undefined array key "nama"
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Controllers\ValidationForm.php on line 35.
+ 1 APPPATH\Controllers\ValidationForm.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\tubes litdat\\ci4\\app\\Controllers\\ValidationForm.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 08:36:34 --> ErrorException: Undefined array key "nama"
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Controllers\ValidationForm.php on line 35.
+ 1 APPPATH\Controllers\ValidationForm.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\tubes litdat\\ci4\\app\\Controllers\\ValidationForm.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 08:38:37 --> ErrorException: Undefined array key "nama"
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Controllers\ValidationForm.php on line 35.
+ 1 APPPATH\Controllers\ValidationForm.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\tubes litdat\\ci4\\app\\Controllers\\ValidationForm.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 10:43:59 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 162.
+ 1 APPPATH\Views\form_validation.html(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 162)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(58): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 10:44:28 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 162.
+ 1 APPPATH\Views\form_validation.html(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 162)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(58): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 10:45:04 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 162.
+ 1 APPPATH\Views\form_validation.html(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 162)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(58): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 10:49:46 --> ErrorException: Undefined variable $pelanggan
+[Method: POST, Route: FormPemesananLayanan]
+in APPPATH\Views\form_validation.html on line 162.
+ 1 APPPATH\Views\form_validation.html(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html', 162)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\tubes litdat\\ci4\\app\\Views\\form_validation.html')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_validation.html', [], true)
+ 5 APPPATH\Controllers\ValidationForm.php(58): view('form_validation.html', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processlayanan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 10:50:51 --> ParseError: Unclosed '{' on line 8
+[Method: GET, Route: FormPemesananLayanan]
+in APPPATH\Controllers\ValidationForm.php on line 63.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\tubes litdat\\ci4\\app\\Controllers\\ValidationForm.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ValidationForm')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ValidationForm')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\ValidationForm', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 11:13:18 --> ParseError: Unclosed '(' does not match ']'
+[Method: GET, Route: LaporanTransaksi]
+in APPPATH\Views\tables_dynamic.html on line 223.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tables_dynamic.html', [], true)
+ 3 APPPATH\Controllers\TableDynamics.php(19): view('tables_dynamic.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 11:14:01 --> ParseError: Unclosed '(' does not match ']'
+[Method: GET, Route: LaporanTransaksi]
+in APPPATH\Views\tables_dynamic.html on line 223.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tables_dynamic.html', [], true)
+ 3 APPPATH\Controllers\TableDynamics.php(20): view('tables_dynamic.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 11:14:04 --> ParseError: Unclosed '(' does not match ']'
+[Method: GET, Route: LaporanTransaksi]
+in APPPATH\Views\tables_dynamic.html on line 223.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tables_dynamic.html', [], true)
+ 3 APPPATH\Controllers\TableDynamics.php(20): view('tables_dynamic.html', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TableDynamics->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TableDynamics))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-19 15:49:02 --> ParseError: syntax error, unexpected token "namespace", expecting "function" or "const"
+[Method: GET, Route: LaporanTransaksi]
+in APPPATH\Controllers\TableDynamics.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\tubes litdat\\ci4\\app\\Controllers\\TableDynamics.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\TableDynamics')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\TableDynamics')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\TableDynamics', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')

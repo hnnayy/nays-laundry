@@ -1,0 +1,284 @@
+DEBUG - 2024-05-17 07:21:56 --> Nama: nnn, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-17 07:36:33 --> Nama: nnn, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-17 07:37:26 --> Pelanggan ID: hanin, Jumlah Layanan: 1, No Telepon: 08111111
+ERROR - 2024-05-17 07:37:26 --> mysqli_sql_exception: Unknown column 'form_pelanggan.id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+#6 D:\tubes litdat\ci4\app\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-17 07:37:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'form_pelanggan.id' in 'where clause'
+[Method: POST, Route: ValidationForm/processLayanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = :form_pelanggan.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+ 4 APPPATH\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-17 07:37:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'form_pelanggan.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = :form_pelanggan.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+ 6 APPPATH\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-17 07:37:26 --> [Caused by] mysqli_sql_exception: Unknown column 'form_pelanggan.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = :form_pelanggan.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+ 7 APPPATH\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+DEBUG - 2024-05-17 07:55:01 --> Pelanggan ID: hanin, Jumlah Layanan: 1, No Telepon: 08111111
+ERROR - 2024-05-17 07:55:01 --> mysqli_sql_exception: Unknown column 'form_pelanggan.id' in 'where clause' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\tubes litdat\ci4\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\tubes litdat\ci4\system\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\tubes litdat\ci4\system\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+#6 D:\tubes litdat\ci4\app\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+#7 D:\tubes litdat\ci4\system\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+#8 D:\tubes litdat\ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+#9 D:\tubes litdat\ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\tubes litdat\ci4\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\tubes litdat\ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\tubes litdat\ci4\system\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat...')
+#14 {main}
+CRITICAL - 2024-05-17 07:55:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'form_pelanggan.id' in 'where clause'
+[Method: POST, Route: ValidationForm/processLayanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = :form_pelanggan.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+ 4 APPPATH\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-17 07:55:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'form_pelanggan.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = :form_pelanggan.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+ 6 APPPATH\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+CRITICAL - 2024-05-17 07:55:01 --> [Caused by] mysqli_sql_exception: Unknown column 'form_pelanggan.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = \'hanin\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pelanggan`
+WHERE `form_pelanggan`.`id` = :form_pelanggan.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(207): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, 'hanin')
+ 7 APPPATH\Controllers\ValidationForm.php(32): CodeIgniter\BaseModel->find('hanin')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ValidationForm->processLayanan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidationForm))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\tubes litdat\\ci4\\public\\index.php')
+DEBUG - 2024-05-17 07:56:17 --> Nama: hanin, Alamat: sukapura, No Telepon: 08111111
+DEBUG - 2024-05-17 07:57:06 --> Pelanggan ID: , Jumlah Layanan: 1, No Telepon: 
+DEBUG - 2024-05-17 08:05:51 --> Pelanggan ID: , Jumlah Layanan: 2, No Telepon: 
+DEBUG - 2024-05-17 08:06:11 --> Pelanggan ID: , Jumlah Layanan: 1, No Telepon: 
+ERROR - 2024-05-17 08:21:31 --> mysqli_sql_exception: Unknown table 'laundry.pelanggan' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('DROP TABLE `pel...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `pel...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `pel...')
+#3 D:\tubes litdat\ci4\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `pel...')
+#4 D:\tubes litdat\ci4\app\Database\Migrations\2024-05-15-182844_FormPendaftaranPelanggan.php(38): CodeIgniter\Database\Forge->dropTable('pelanggan')
+#5 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(867): App\Database\Migrations\FormPendaftaranPelanggan->down()
+#6 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\tubes litdat\ci4\system\Commands\Database\MigrateRollback.php(87): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\tubes litdat\ci4\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\tubes litdat\ci4\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\tubes litdat\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\tubes litdat\ci4\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#14 D:\tubes litdat\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\tubes litdat\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2024-05-17 08:21:31 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `f...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `f...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `f...')
+#3 D:\tubes litdat\ci4\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `f...')
+#4 D:\tubes litdat\ci4\app\Database\Migrations\2024-05-16-154506_FormLayanan.php(59): CodeIgniter\Database\Forge->createTable('form_layanan')
+#5 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(867): App\Database\Migrations\FormLayanan->up()
+#6 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\tubes litdat\ci4\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\tubes litdat\ci4\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\tubes litdat\ci4\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\tubes litdat\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\tubes litdat\ci4\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#14 D:\tubes litdat\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\tubes litdat\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2024-05-17 08:22:28 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `f...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `f...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `f...')
+#3 D:\tubes litdat\ci4\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `f...')
+#4 D:\tubes litdat\ci4\app\Database\Migrations\2024-05-16-154506_FormLayanan.php(59): CodeIgniter\Database\Forge->createTable('form_layanan')
+#5 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(867): App\Database\Migrations\FormLayanan->up()
+#6 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\tubes litdat\ci4\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\tubes litdat\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\tubes litdat\ci4\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\tubes litdat\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-17 08:25:58 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `f...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `f...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `f...')
+#3 D:\tubes litdat\ci4\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `f...')
+#4 D:\tubes litdat\ci4\app\Database\Migrations\2024-05-16-154506_FormLayanan.php(59): CodeIgniter\Database\Forge->createTable('form_layanan')
+#5 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(867): App\Database\Migrations\FormLayanan->up()
+#6 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\tubes litdat\ci4\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\tubes litdat\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\tubes litdat\ci4\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\tubes litdat\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+DEBUG - 2024-05-17 13:16:35 --> Pelanggan ID: , Jumlah Layanan: 1, No Telepon: 
+DEBUG - 2024-05-17 13:35:24 --> Nama: , Jumlah Layanan: 1, Total Harga Keseluruhan: 
+ERROR - 2024-05-17 13:46:27 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `f...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `f...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `f...')
+#3 D:\tubes litdat\ci4\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `f...')
+#4 D:\tubes litdat\ci4\app\Database\Migrations\2024-05-16-154506_FormLayanan.php(59): CodeIgniter\Database\Forge->createTable('form_layanan')
+#5 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(867): App\Database\Migrations\FormLayanan->up()
+#6 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\tubes litdat\ci4\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\tubes litdat\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\tubes litdat\ci4\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\tubes litdat\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-17 13:59:24 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `f...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `f...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `f...')
+#3 D:\tubes litdat\ci4\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `f...')
+#4 D:\tubes litdat\ci4\app\Database\Migrations\2024-05-16-154506_FormLayanan.php(59): CodeIgniter\Database\Forge->createTable('form_layanan')
+#5 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(867): App\Database\Migrations\FormLayanan->up()
+#6 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\tubes litdat\ci4\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\tubes litdat\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\tubes litdat\ci4\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\tubes litdat\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-17 14:03:11 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\tubes litdat\ci4\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `f...', 0)
+#1 D:\tubes litdat\ci4\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `f...')
+#2 D:\tubes litdat\ci4\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `f...')
+#3 D:\tubes litdat\ci4\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `f...')
+#4 D:\tubes litdat\ci4\app\Database\Migrations\2024-05-16-154506_FormLayanan.php(59): CodeIgniter\Database\Forge->createTable('form_layanan')
+#5 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(867): App\Database\Migrations\FormLayanan->up()
+#6 D:\tubes litdat\ci4\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\tubes litdat\ci4\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\tubes litdat\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\tubes litdat\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\tubes litdat\ci4\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 D:\tubes litdat\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\tubes litdat\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
